@@ -1,0 +1,14 @@
+select accountID, FirstName, LastName, EmailAddress from contact
+select ID, phone from account where phone = null order by name
+select Id from contact where accountId= null 
+select count() from opportunity
+select Id, Amount, StageName from opportunity where StageName=Closed-Won and Amount>=35000
+select Id, AccountId, Account.name from contact order by LastName desc
+select Id, (Select StageName from opportunities where StageName!='Closed Lost') from account
+select Id, Amount from opportunity order by Amount desc limit 10
+
+select Id, StageName, Amount from opportunity where StageName !='Closed Won' and account='Closed Lost' order by limit 20
+SELECT Amount, StageName from Opportunity where StageName!='Closed Won' and StageName!='Closed Lost' order by Amount  Limit 20
+
+
+
